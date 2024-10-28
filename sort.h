@@ -26,6 +26,9 @@ void print_list(const listint_t *list);
 /* prototypes for the given questions */
 void bubble_sort(int *array, size_t size);
 void swp_int(int *aa, int *ab);
+void insertion_sort_list(listint_t **list);
+void swp_ndes(listint_t **list, listint_t *first_int, listint_t *second_int);
+
 
 
 #endif /* SORT_H */
