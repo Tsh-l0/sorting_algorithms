@@ -1,10 +1,12 @@
 #include "sort.h"
 
 /**
- * swp_int - Swops integers in an array
+ * swp_ints - Swops integers in an array
  *
  * @aa: First int to swop
  * @ab: Second int to swop
+ * @array: The array of integers
+ * @size: Size of the array
  */
 void swp_ints(int *aa, int *ab, int *array, size_t size)
 {
@@ -62,6 +64,7 @@ void quick_sort_recursion(int *array, int head, int tail, size_t size)
 	if (head < tail)
 	{
 		int part_idx = lomuto_part(array, head, tail, size);
+
 		quick_sort_recursion(array, head, part_idx - 1, size);
 		quick_sort_recursion(array, part_idx + 1, tail, size);
 	}
