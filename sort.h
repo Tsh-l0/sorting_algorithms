@@ -30,6 +30,9 @@ void insertion_sort_list(listint_t **list);
 void swp_ndes(listint_t **list, listint_t *first_int, listint_t *second_int);
 void swp_int(int *aa, int *ab);
 void selection_sort(int *array, size_t size);
+int lomuto_part(int *array, int head, int tail, size_t size);
+void quick_sort_recursion(int *array, int head, int tail, size_t size);
+void quick_sort(int *array, size_t size);
 
 
 #endif /* SORT_H */
