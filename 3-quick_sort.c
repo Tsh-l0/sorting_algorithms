@@ -6,13 +6,17 @@
  * @aa: First int to swop
  * @ab: Second int to swop
  */
-void swp_int(int *aa, int *ab)
+void swp_ints(int *aa, int *ab, int *array, size_t size)
 {
-	int tmp_int;
+	if (*aa != *ab)
+	{
+		int tmp_int;
 
-	tmp_int = *aa;
-	*aa = *ab;
-	*ab = tmp_int;
+		tmp_int = *aa;
+		*aa = *ab;
+		*ab = tmp_int;
+		print_array(array, size);
+	}
 }
 
 /**
@@ -33,15 +37,13 @@ int lomuto_part(int *array, int head, int tail, size_t size)
 
 	for (j = head; j < tail; j++)
 	{
-		if (array[j] < pivot)
+		if (array[j] <= pivot)
 		{
 			i++;
-			swp_int(&array[i], &array[j]);
-			print_array(array, size);
+			swp_ints(&array[i], &array[j], array, size);
 		}
 	}
-	swp_int(&array[i + 1], &array[tail]);
-	print_array(array, size);
+	swp_ints(&array[i + 1], &array[tail], array, size);
 
 	return (i + 1);
 }

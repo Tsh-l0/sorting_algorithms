@@ -33,6 +33,7 @@ void selection_sort(int *array, size_t size);
 int lomuto_part(int *array, int head, int tail, size_t size);
 void quick_sort_recursion(int *array, int head, int tail, size_t size);
 void quick_sort(int *array, size_t size);
+void swp_ints(int *aa, int *ab, int *array, size_t size);
 
 
 #endif /* SORT_H */
